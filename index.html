@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El Taller del Software - Soluciones Digitales para PYMES</title>
+    <link rel="shortcut icon" href="logo_icon.png" />
     <!-- TailwindCSS desde CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Fuente personalizada -->
@@ -35,6 +36,47 @@
         .highlight {
             border-color: #6366f1;
             box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+        }
+
+        /* Estilos de la barra de progreso */
+        .progress-bar {
+            background-color: #e5e7eb;
+            /* Gris claro */
+            border-radius: 0.25rem;
+            height: 10px;
+            width: 100%;
+            margin-top: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 0.25rem;
+            background-color: #6366f1;
+            /* Azul indigo */
+            transition: width 0.3s ease-in-out;
+        }
+
+        /* Estilos del carrusel de testimonios */
+        .testimonial-carousel {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .testimonial {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .testimonial p {
+            font-size: 1.125rem;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -88,7 +130,7 @@
                     El Taller del Software
                 </h1>
                 <p class="text-xl md:text-2xl mb-8 drop-shadow-md">
-                    Transformamos tus ideas en soluciones digitales a medida y con pasión.
+                    Transformamos tus ideas en soluciones digitales a medida.
                 </p>
                 <a href="#contacto"
                     class="animate-bounce px-6 py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow hover:bg-gray-100">Contáctanos</a>
@@ -100,32 +142,43 @@
     <section id="about" class="py-16">
         <div class="max-w-7xl mx-auto px-4">
             <div class="mx-auto">
-                <h2 class="text-3xl font-bold mb-4 text-center">Nuestro Enfoque</h2>
-                <p class="mb-4 text-lg text-center">
-                    No pretendemos ser los líderes en tecnología, sino brindar a las
-                    PYMES la oportunidad de transformar sus ideas en realidad. Con
-                    asesoramiento experto y la amplia experiencia de nuestro equipo,
-                    digitalizamos tu negocio para que puedas competir y crecer en el
-                    mercado actual.
+                <h2 class="text-5xl font-bold mb-4 text-center">Nuestro Enfoque</h2>
+                <p class="mt-6 text-lg text-center">
+                    En <strong>El Taller del Software</strong> brindamos soluciones de
+                    software transformando ideas en proyectos concretos.
                 </p>
-                <p class="text-lg text-center">
-                    Te acompañamos en cada paso, desde la concepción de tu proyecto hasta
+                <p class="mt-6 text-lg text-center">
+                    No pretendemos ser los líderes en tecnología, sino brindar a
+                    las PYMES la oportunidad de transformar sus ideas en realidad.
+                </p>
+                <p class="mt-6 text-lg text-center">
+                    Disponemos de una amplia experiencia en análisis de empresas y
+                    mercados, nuestro equipo combina versatilidad y solvencia técnica
+                    para que cada cliente pueda digitalizar su negocio.
+                </p>
+                <p class="mt-6 text-lg text-center">
+                    Nuestro CEO, director ejecutivo, cuenta con siete años de
+                    experiencia
+                    en soluciones para la Industria 4.0, habiendo trabajado dos años en
+                    Telefónica Tech y colaborando actualmente en el sector Hospedaje
+                    con una empresa multinacional francesa (Septeo).
+                </p>
+                <p class="mt-6 text-lg text-center">
+                    Te acompañamos en cada paso, desde la concepción de tu idea hasta
                     su implementación, asegurando que cada solución se adapte perfectamente
                     a tus necesidades.
                 </p>
-                <!-- Nuevos párrafos agregados -->
-                <p class="mt-6 text-lg text-center">
-                    En <strong>El Taller del Software</strong> brindamos soluciones de
-                    software transformando ideas en proyectos concretos. Gracias a una
-                    amplia experiencia en análisis de empresas y mercados, nuestro equipo
-                    combina versatilidad y solvencia técnica para que cada cliente digitalice
-                    su negocio sin complicaciones.
+                <p class="mt-6 text-2xl text-center">
+                    <b>¡Hablamos de tú a tú!</b>
                 </p>
-                <p class="mt-4 text-lg text-center">
-                    Nuestro CEO cuenta con siete años de experiencia en soluciones para la
-                    Industria 4.0, habiendo trabajado dos años en Telefónica Tech y
-                    colaborando actualmente en el sector Hospedaje con una empresa
-                    multinacional francesa (Septeo).
+                <p class="mt-6 text-lg text-center">
+                    Cuentanos en que estás pensando y te ayudamos a hacerlo realidad.
+                </p>
+                <p class="mt-6 text-lg text-center">
+                    Sigue leyendo y verás algunos de nuestros productos y proyectos que tenemos activos y en cola de
+                    analisis para llevarlos a cabo.</p>
+                <p class="mt-6 text-lg text-center">
+                    Hay de todo tipo, solo cuentanos que quieres y si podemos ayudarte, te indicaremos como.
                 </p>
             </div>
         </div>
@@ -134,7 +187,7 @@
     <!-- Sección: Proyectos en Desarrollo -->
     <section id="proyectos" class="py-16">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Proyectos en Desarrollo</h2>
+            <h2 class="text-5xl font-bold text-center mb-12">Proyectos en Desarrollo</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Proyecto 1: Negocio Nocturno -->
                 <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
@@ -143,6 +196,11 @@
                         Aplicación para el Negocio Nocturno
                     </h3>
                     <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                    <!-- Barra de Progreso -->
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 30%;"></div>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Progreso: 30%</p>
                 </div>
                 <!-- Proyecto 2: Mascotas -->
                 <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
@@ -151,6 +209,11 @@
                         Aplicación para Personas con Mascotas
                     </h3>
                     <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                    <!-- Barra de Progreso -->
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 45%;"></div>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Progreso: 45%</p>
                 </div>
                 <!-- Proyecto 3: Independizadas -->
                 <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
@@ -159,12 +222,22 @@
                         Aplicación para Personas Independizadas
                     </h3>
                     <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                    <!-- Barra de Progreso -->
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 30%;"></div>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Progreso: 30%</p>
                 </div>
                 <!-- Proyecto 4: Diabetes -->
                 <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
                     onclick="openModal('diabetes')">
                     <h3 class="text-2xl font-semibold mb-2">Aplicación para Diabetes Tipo 1</h3>
                     <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                    <!-- Barra de Progreso -->
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 10%;"></div>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Progreso: 10%</p>
                 </div>
                 <!-- Proyecto 5: Listas de Regalos -->
                 <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
@@ -173,6 +246,11 @@
                         Aplicación para Gestión Digital de Listas de Regalos
                     </h3>
                     <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                    <!-- Barra de Progreso -->
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 5%;"></div>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Progreso: 5%</p>
                 </div>
                 <!-- Proyecto 6: Mantenimiento -->
                 <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
@@ -181,6 +259,11 @@
                         Aplicación para Empresas de Mantenimiento
                     </h3>
                     <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                    <!-- Barra de Progreso -->
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 10%;"></div>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Progreso: 10%</p>
                 </div>
             </div>
         </div>
@@ -189,7 +272,7 @@
     <!-- Sección: Futuros Proyectos -->
     <section id="futuros" class="py-16">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Futuros Proyectos</h2>
+            <h2 class="text-5xl font-bold text-center mb-12">Futuros Proyectos</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Futuro 1: Almacén -->
                 <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
@@ -230,37 +313,260 @@
     <!-- Sección: Testimonios -->
     <section id="testimonios" class="py-16">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Testimonios</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Testimonio 1 -->
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <p class="italic text-gray-600 mb-4">
-                        "El Taller del Software transformó nuestra forma de hacer negocios. Su atención personalizada y
-                        soluciones adaptadas han sido clave para nuestro crecimiento."
-                    </p>
-                    <p class="font-semibold text-indigo-600">
-                        - María López, CEO de Startup X
-                    </p>
-                </div>
-                <!-- Testimonio 2 -->
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <p class="italic text-gray-600 mb-4">
-                        "La digitalización de nuestros procesos nunca fue tan sencilla. Su equipo es profesional,
-                        comprometido y realmente entiende nuestras necesidades."
-                    </p>
-                    <p class="font-semibold text-indigo-600">
-                        - Carlos Méndez, Gerente de Operaciones
-                    </p>
-                </div>
-                <!-- Testimonio 3 -->
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <p class="italic text-gray-600 mb-4">
-                        "Recomiendo a El Taller del Software para cualquier pyme que busque innovación y asesoramiento
-                        experto. Su enfoque es realmente disruptivo."
-                    </p>
-                    <p class="font-semibold text-indigo-600">
-                        - Ana García, Directora de Marketing
-                    </p>
+            <h2 class="text-5xl font-bold text-center mb-12">Testimonios</h2>
+            <!--<div class="grid md:grid-cols-3 gap-8">-->
+            <div class="testimonial-carousel" id="testimonialCarousel">
+                <div class="testimonial-carousel-inner">
+                    <div class="testimonial grid md:grid-cols-3 gap-8">
+                        <!-- Testimonio 1 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "El Taller del Software transformó nuestra forma de hacer negocios. Su atención
+                                personalizada y
+                                soluciones adaptadas han sido clave para nuestro crecimiento."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - María López, CEO de Startup X
+                            </p>
+                        </div>
+                        <!-- Testimonio 2 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "La digitalización de nuestros procesos nunca fue tan sencilla. Su equipo es
+                                profesional,
+                                comprometido y realmente entiende nuestras necesidades."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Carlos Méndez, Gerente de Operaciones
+                            </p>
+                        </div>
+                        <!-- Testimonio 3 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "Recomiendo a El Taller del Software para cualquier pyme que busque innovación y
+                                asesoramiento
+                                experto. Su enfoque es realmente disruptivo."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Ana García, Directora de Marketing
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial grid md:grid-cols-3 gap-8">
+                        <!-- Testimonio 4 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "Gracias a El Taller del Software, nuestra empresa dio un salto al mundo digital. Su
+                                equipo entendió nuestras necesidades desde el primer momento."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - David Fernández, Gerente General
+                            </p>
+                        </div>
+                        <!-- Testimonio 5 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "La implementación del software fue impecable. Ahora gestionamos todo con mucha más
+                                eficiencia."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Lorena Martínez, Directora de Proyectos
+                            </p>
+                        </div>
+                        <!-- Testimonio 6 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "Lo que más me gustó fue el enfoque personalizado. Se nota que realmente les importa el
+                                éxito de sus clientes."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Javier Castro, Propietario de Negocio
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial grid md:grid-cols-3 gap-8">
+                        <!-- Testimonio 7 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "No solo recibimos un software increíble, sino también excelentes consejos sobre cómo
+                                optimizar nuestros procesos."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Teresa Gil, Consultora Estratégica
+                            </p>
+                        </div>
+                        <!-- Testimonio 8 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "¡El impacto en nuestro negocio fue inmediato! Estamos más organizados y nuestros
+                                clientes lo notan."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Mario Vega, CEO de Empresas Vega
+                            </p>
+                        </div>
+                        <!-- Testimonio 9 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "El equipo de El Taller del Software superó todas nuestras expectativas. Su
+                                profesionalismo es único."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Clara Sánchez, Directora de Marketing
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial grid md:grid-cols-3 gap-8">
+                        <!-- Testimonio 10 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "Recomendaría sus servicios a cualquier pyme que busque digitalizarse. ¡Es el mejor
+                                aliado que puedes tener!"
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Álvaro Ruiz, Empresario
+                            </p>
+                        </div>
+                        <!-- Testimonio 11 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "Pasamos de usar herramientas desactualizadas a tener un sistema totalmente moderno y
+                                eficiente. ¡Muchas gracias!"
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Beatriz López, Gerente de Finanzas
+                            </p>
+                        </div>
+                        <!-- Testimonio 12 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "El Taller del Software fue clave para digitalizar nuestro negocio y competir con
+                                empresas más grandes."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Raúl Díaz, Fundador de StartUp Z
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial grid md:grid-cols-3 gap-8">
+                        <!-- Testimonio 13 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "Es difícil encontrar empresas que te entiendan tan bien. ¡Un equipo excepcional!"
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Clara Muñoz, Administradora
+                            </p>
+                        </div>
+                        <!-- Testimonio 14 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "Nos encantó lo involucrado que estuvo el equipo en todo el proceso. ¡Realmente se
+                                preocupan!"
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Tomás Rivas, Director de Tecnología
+                            </p>
+                        </div>
+                        <!-- Testimonio 15 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "Ahora somos más eficientes y competitivos gracias a las herramientas personalizadas que
+                                nos desarrollaron."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Paula Vargas, CEO
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial grid md:grid-cols-3 gap-8">
+                        <!-- Testimonio 16 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "Desde el primer contacto, supimos que estábamos trabajando con expertos."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Javier López, Director de Innovación
+                            </p>
+                        </div>
+                        <!-- Testimonio 17 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "Fue la mejor decisión que pudimos tomar para nuestro crecimiento digital."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Alejandro Torres, Gerente de Desarrollo
+                            </p>
+                        </div>
+                        <!-- Testimonio 18 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "¡Tienen un equipo con una atención al detalle increíble!"
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Valeria Ramos, Consultora
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial grid md:grid-cols-3 gap-8">
+                        <!-- Testimonio 19 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "El Taller del Software no solo resolvió nuestros problemas, sino que nos ayudó a ser
+                                más competitivos."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Gabriel Navarro, COO
+                            </p>
+                        </div>
+                        <!-- Testimonio 20 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "Su proceso es simple, pero sus resultados son extraordinarios."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Laura Iglesias, Directora General
+                            </p>
+                        </div>
+                        <!-- Testimonio 21 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "Nuestra experiencia fue tan buena que ya los hemos recomendado a varias empresas."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Pedro Ortiz, Emprendedor
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial grid md:grid-cols-3 gap-8">
+                        <!-- Testimonio 22 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "Gracias a su asesoramiento, hoy tenemos más clientes satisfechos."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Helena Bravo, Responsable de Ventas
+                            </p>
+                        </div>
+                        <!-- Testimonio 23 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "La solución personalizada que nos ofrecieron es justo lo que necesitábamos."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Marcos Fuentes, CEO
+                            </p>
+                        </div>
+                        <!-- Testimonio 24 -->
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <p class="italic text-gray-600 mb-4">
+                                "Son expertos y trabajan con tanta pasión que te inspiran a innovar aún más."
+                            </p>
+                            <p class="font-semibold text-indigo-600">
+                                - Sara Medina, Innovadora Empresarial
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -269,10 +575,15 @@
     <!-- Sección: Piensa en transformarte (Las 3 imágenes fijas) -->
     <section id="piensa" class="py-16">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Piensa en transformarte</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <img src="Picture (2).png" alt="Transformate 2" class="w-full rounded-lg shadow" />
+            <h2 class="text-5xl font-bold text-center mb-12">Piensa en Transformarte</h2>
+            <div class="mt-6 grid md:grid-cols-3 gap-8">
+                <img src="Picture (5).png" alt="Transformate 5" class="w-full rounded-lg shadow" />
                 <img src="Picture (3).png" alt="Transformate 3" class="w-full rounded-lg shadow" />
+                <img src="Picture (6).png" alt="Transformate 3" class="w-full rounded-lg shadow" />
+            </div>
+            <div class="mt-6 grid md:grid-cols-3 gap-8">
+                <img src="Picture (2).png" alt="Transformate 2" class="w-full rounded-lg shadow" />
+                <img src="Picture (7).png" alt="Transformate 7" class="w-full rounded-lg shadow" />
                 <img src="Picture (1).png" alt="Transformate 1" class="w-full rounded-lg shadow" />
             </div>
         </div>
@@ -281,7 +592,7 @@
     <!-- Sección: Contacto -->
     <section id="contacto" class="py-16">
         <div class="max-w-3xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Contáctanos</h2>
+            <h2 class="text-5xl font-bold text-center mb-8">Contáctanos</h2>
             <form action="https://usebasin.com/f/cc4db3b755d9" method="POST" class="space-y-6">
                 <div>
                     <label for="nombre" class="block text-lg font-medium">Nombre</label>
@@ -336,20 +647,8 @@
                             </option>
                         </optgroup>
                         <optgroup label="Tú Proyecto">
-                            <option value="Nuevo_WIN">
-                                Aplicación de Escritorio
-                            </option>
-                            <option value="Nuevo_APK">
-                                Aplicación Móvil
-                            </option>
-                            <option value="Nuevo_WEB">
-                                Landing Page o Página de Lanzamiento
-                            </option>
-                            <option value="Nuevo_MIX">
-                                Un Mix de Todo
-                            </option>
-                            <option value="Nuevo_INE">
-                                Tengo dudas
+                            <option value="Nuevo">
+                                Nuevo
                             </option>
                         </optgroup>
                     </select>
@@ -474,6 +773,20 @@
             const modal = document.getElementById("projectModal");
             modal.style.display = "none";
         }
+
+        const testimonialCarousel = document.querySelector(
+            "#testimonialCarousel"
+        );
+        const testimonialInner = document.querySelector(
+            ".testimonial-carousel-inner"
+        );
+        let carouselIndex = 0;
+        setInterval(() => {
+            carouselIndex =
+                (carouselIndex + 1) % testimonialInner.children.length;
+            testimonialInner.style.transform = `translateX(-${carouselIndex * 100
+                }%)`;
+        }, 10000); // Cambia cada 15 segundos
     </script>
 </body>
 
