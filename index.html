@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Taller del Software - Soluciones Digitales para PYMES</title>
+    <!-- TailwindCSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuente personalizada -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #ffffff;
+        }
+
+        /* Efecto de hover para las tarjetas de proyecto */
+        .project-card {
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para el modal */
+        #projectModal {
+            display: none;
+        }
+
+        /* Efecto de resalte en el desplegable del formulario */
+        .highlight {
+            border-color: #6366f1;
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+        }
+    </style>
+</head>
+
+<body class="antialiased text-gray-700">
+    <!-- Barra de Navegación -->
+    <header class="fixed top-0 w-full z-30">
+        <nav class="bg-white shadow">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex">
+                        <div class="flex-shrink-0 flex items-center">
+                            <a href="#hero" class="text-2xl font-bold text-indigo-600">
+                                El Taller del Software
+                            </a>
+                        </div>
+                        <div class="hidden sm:-my-px sm:ml-10 sm:flex">
+                            <a href="#about"
+                                class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium hover:border-indigo-600">Nuestro
+                                Enfoque</a>
+                            <a href="#proyectos"
+                                class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium hover:border-indigo-600">Proyectos
+                                en Desarrollo</a>
+                            <a href="#futuros"
+                                class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium hover:border-indigo-600">Futuros
+                                Proyectos</a>
+                            <a href="#testimonios"
+                                class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium hover:border-indigo-600">Testimonios</a>
+                            <a href="#piensa"
+                                class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium hover:border-indigo-600">Piensa
+                                en transformarte</a>
+                            <a href="#contacto"
+                                class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium hover:border-indigo-600">Contacto</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <a href="#contacto"
+                            class="ml-8 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section id="hero" class="pt-16">
+        <div class="relative bg-cover bg-center h-screen" style="background-image: url('logo.png');">
+            <div class="absolute inset-0 bg-indigo-900 bg-opacity-70"></div>
+            <div class="relative flex flex-col justify-center items-center h-full text-center text-white px-4">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">
+                    El Taller del Software
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 drop-shadow-md">
+                    Transformamos tus ideas en soluciones digitales a medida y con pasión.
+                </p>
+                <a href="#contacto"
+                    class="animate-bounce px-6 py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow hover:bg-gray-100">Contáctanos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Nuestro Enfoque -->
+    <section id="about" class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mx-auto">
+                <h2 class="text-3xl font-bold mb-4 text-center">Nuestro Enfoque</h2>
+                <p class="mb-4 text-lg text-center">
+                    No pretendemos ser los líderes en tecnología, sino brindar a las
+                    PYMES la oportunidad de transformar sus ideas en realidad. Con
+                    asesoramiento experto y la amplia experiencia de nuestro equipo,
+                    digitalizamos tu negocio para que puedas competir y crecer en el
+                    mercado actual.
+                </p>
+                <p class="text-lg text-center">
+                    Te acompañamos en cada paso, desde la concepción de tu proyecto hasta
+                    su implementación, asegurando que cada solución se adapte perfectamente
+                    a tus necesidades.
+                </p>
+                <!-- Nuevos párrafos agregados -->
+                <p class="mt-6 text-lg text-center">
+                    En <strong>El Taller del Software</strong> brindamos soluciones de
+                    software transformando ideas en proyectos concretos. Gracias a una
+                    amplia experiencia en análisis de empresas y mercados, nuestro equipo
+                    combina versatilidad y solvencia técnica para que cada cliente digitalice
+                    su negocio sin complicaciones.
+                </p>
+                <p class="mt-4 text-lg text-center">
+                    Nuestro CEO cuenta con siete años de experiencia en soluciones para la
+                    Industria 4.0, habiendo trabajado dos años en Telefónica Tech y
+                    colaborando actualmente en el sector Hospedaje con una empresa
+                    multinacional francesa (Septeo).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Proyectos en Desarrollo -->
+    <section id="proyectos" class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Proyectos en Desarrollo</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Proyecto 1: Negocio Nocturno -->
+                <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
+                    onclick="openModal('negocioNocturno')">
+                    <h3 class="text-2xl font-semibold mb-2">
+                        Aplicación para el Negocio Nocturno
+                    </h3>
+                    <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                </div>
+                <!-- Proyecto 2: Mascotas -->
+                <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
+                    onclick="openModal('mascotas')">
+                    <h3 class="text-2xl font-semibold mb-2">
+                        Aplicación para Personas con Mascotas
+                    </h3>
+                    <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                </div>
+                <!-- Proyecto 3: Independizadas -->
+                <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
+                    onclick="openModal('independizadas')">
+                    <h3 class="text-2xl font-semibold mb-2">
+                        Aplicación para Personas Independizadas
+                    </h3>
+                    <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                </div>
+                <!-- Proyecto 4: Diabetes -->
+                <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
+                    onclick="openModal('diabetes')">
+                    <h3 class="text-2xl font-semibold mb-2">Aplicación para Diabetes Tipo 1</h3>
+                    <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                </div>
+                <!-- Proyecto 5: Listas de Regalos -->
+                <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
+                    onclick="openModal('regalos')">
+                    <h3 class="text-2xl font-semibold mb-2">
+                        Aplicación para Gestión Digital de Listas de Regalos
+                    </h3>
+                    <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                </div>
+                <!-- Proyecto 6: Mantenimiento -->
+                <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
+                    onclick="openModal('mantenimiento')">
+                    <h3 class="text-2xl font-semibold mb-2">
+                        Aplicación para Empresas de Mantenimiento
+                    </h3>
+                    <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Futuros Proyectos -->
+    <section id="futuros" class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Futuros Proyectos</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Futuro 1: Almacén -->
+                <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
+                    onclick="openModal('almacen')">
+                    <h3 class="text-2xl font-semibold mb-2">
+                        Sistema de Gestión de Almacén
+                    </h3>
+                    <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                </div>
+                <!-- Futuro 2: Horario -->
+                <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
+                    onclick="openModal('horario')">
+                    <h3 class="text-2xl font-semibold mb-2">
+                        Sistema de Control Horario
+                    </h3>
+                    <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                </div>
+                <!-- Futuro 3: Entrenador -->
+                <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
+                    onclick="openModal('entrenador')">
+                    <h3 class="text-2xl font-semibold mb-2">
+                        Aplicación para Entrenador Personal
+                    </h3>
+                    <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                </div>
+                <!-- Futuro 4: Restauración -->
+                <div class="project-card bg-white border border-gray-200 p-6 rounded-lg shadow"
+                    onclick="openModal('restauracion')">
+                    <h3 class="text-2xl font-semibold mb-2">
+                        Aplicación para el Sector Restauración
+                    </h3>
+                    <p class="text-gray-700">Haz clic para ver más detalles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Testimonios -->
+    <section id="testimonios" class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Testimonios</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <p class="italic text-gray-600 mb-4">
+                        "El Taller del Software transformó nuestra forma de hacer negocios. Su atención personalizada y
+                        soluciones adaptadas han sido clave para nuestro crecimiento."
+                    </p>
+                    <p class="font-semibold text-indigo-600">
+                        - María López, CEO de Startup X
+                    </p>
+                </div>
+                <!-- Testimonio 2 -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <p class="italic text-gray-600 mb-4">
+                        "La digitalización de nuestros procesos nunca fue tan sencilla. Su equipo es profesional,
+                        comprometido y realmente entiende nuestras necesidades."
+                    </p>
+                    <p class="font-semibold text-indigo-600">
+                        - Carlos Méndez, Gerente de Operaciones
+                    </p>
+                </div>
+                <!-- Testimonio 3 -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <p class="italic text-gray-600 mb-4">
+                        "Recomiendo a El Taller del Software para cualquier pyme que busque innovación y asesoramiento
+                        experto. Su enfoque es realmente disruptivo."
+                    </p>
+                    <p class="font-semibold text-indigo-600">
+                        - Ana García, Directora de Marketing
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Piensa en transformarte (Las 3 imágenes fijas) -->
+    <section id="piensa" class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Piensa en transformarte</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <img src="Picture (2).png" alt="Transformate 2" class="w-full rounded-lg shadow" />
+                <img src="Picture (3).png" alt="Transformate 3" class="w-full rounded-lg shadow" />
+                <img src="Picture (1).png" alt="Transformate 1" class="w-full rounded-lg shadow" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Contacto -->
+    <section id="contacto" class="py-16">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Contáctanos</h2>
+            <form action="https://usebasin.com/f/cc4db3b755d9" method="POST" class="space-y-6">
+                <div>
+                    <label for="nombre" class="block text-lg font-medium">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required
+                        class="mt-1 block w-full border border-gray-300 rounded p-3" />
+                </div>
+                <div>
+                    <label for="email" class="block text-lg font-medium">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required
+                        class="mt-1 block w-full border border-gray-300 rounded p-3" />
+                </div>
+                <!-- Desplegable para identificar el proyecto -->
+                <div>
+                    <label for="proyecto" class="block text-lg font-medium">Motivo del Contacto</label>
+                    <select id="proyecto" name="proyecto" required
+                        class="mt-1 block w-full border border-gray-300 rounded p-3">
+                        <option value="" disabled selected>
+                            Seleccione un proyecto...
+                        </option>
+                        <optgroup label="Proyectos en Desarrollo">
+                            <option value="negocioNocturno">
+                                Aplicación para el Negocio Nocturno
+                            </option>
+                            <option value="mascotas">
+                                Aplicación para Personas con Mascotas
+                            </option>
+                            <option value="independizadas">
+                                Aplicación para Personas Independizadas
+                            </option>
+                            <option value="diabetes">
+                                Aplicación para Diabetes Tipo 1
+                            </option>
+                            <option value="regalos">
+                                Aplicación para Gestión Digital de Listas de Regalos
+                            </option>
+                            <option value="mantenimiento">
+                                Aplicación para Empresas de Mantenimiento
+                            </option>
+                        </optgroup>
+                        <optgroup label="Futuros Proyectos">
+                            <option value="almacen">
+                                Sistema de Gestión de Almacén
+                            </option>
+                            <option value="horario">
+                                Sistema de Control Horario
+                            </option>
+                            <option value="entrenador">
+                                Aplicación para Entrenador Personal
+                            </option>
+                            <option value="restauracion">
+                                Aplicación para el Sector Restauración
+                            </option>
+                        </optgroup>
+                        <optgroup label="Tú Proyecto">
+                            <option value="Nuevo_WIN">
+                                Aplicación de Escritorio
+                            </option>
+                            <option value="Nuevo_APK">
+                                Aplicación Móvil
+                            </option>
+                            <option value="Nuevo_WEB">
+                                Landing Page o Página de Lanzamiento
+                            </option>
+                            <option value="Nuevo_MIX">
+                                Un Mix de Todo
+                            </option>
+                            <option value="Nuevo_INE">
+                                Tengo dudas
+                            </option>
+                        </optgroup>
+                    </select>
+                    <div id="selectedProject" class="mt-2 text-lg font-medium text-indigo-600"></div>
+                </div>
+                <div>
+                    <label for="mensaje" class="block text-lg font-medium">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required
+                        class="mt-1 block w-full border border-gray-300 rounded p-3"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit"
+                        class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700">
+                        Enviar Mensaje
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2025 El Taller del Software. Todos los derechos reservados.</p>
+            <p>Transformamos ideas en soluciones digitales.</p>
+        </div>
+    </footer>
+
+    <!-- Modal para Detalle de Proyecto -->
+    <div id="projectModal" class="fixed inset-0 bg-blue-900 bg-opacity-95 flex items-center justify-center z-50">
+        <div class="bg-blue-900 text-white p-8 rounded-lg max-w-2xl w-full mx-4">
+            <h3 id="modalTitle" class="text-3xl font-bold mb-4"></h3>
+            <p id="modalContent" class="text-lg"></p>
+            <div class="mt-8 text-center">
+                <button onclick="closeModal()"
+                    class="bg-white text-blue-900 font-semibold py-2 px-4 rounded hover:bg-gray-100">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript: Modal, Select -->
+    <script>
+        // Resalta el elemento seleccionado en el desplegable del formulario
+        const proyectoSelect = document.getElementById("proyecto");
+        const selectedProjectDiv = document.getElementById("selectedProject");
+        proyectoSelect.addEventListener("change", function () {
+            const selectedValue = this.options[this.selectedIndex].text;
+            selectedProjectDiv.textContent = "Has seleccionado: " + selectedValue;
+            this.classList.add("highlight");
+            setTimeout(() => {
+                proyectoSelect.classList.remove("highlight");
+            }, 2000);
+        });
+
+        // Diccionario con los detalles de cada proyecto
+        const projectDetails = {
+            negocioNocturno: {
+                title: "Aplicación para el Negocio Nocturno",
+                description:
+                    "Aplicación dirigida al negocio nocturno, donde transformamos la carta de bebidas y cócteles en un juego de trading como la Bolsa. Además, gestiona y lleva un control exacto y digital de lo que se vende en las pantallas de tu pub: cada vez que se consume un producto, éste baja de precio e incrementa el resto de productos. Dentro de la aplicación existen eventos configurables para animar el consumo según tiempo, franja horaria y motivo."
+            },
+            mascotas: {
+                title: "Aplicación para Personas con Mascotas",
+                description:
+                    "Aplicación dirigida a personas con mascotas, cuyo objetivo es que, si tu mascota se pierde, la persona que la encuentre pueda contactarte de forma rápida y segura. La mascota dispone de un QR único para su identificación, similar a un DNI; el dueño lo configura a través de una app móvil, y quien la encuentre únicamente lee el QR y envía un mensaje, manteniendo siempre el anonimato."
+            },
+            independizadas: {
+                title: "Aplicación para Personas Independizadas",
+                description:
+                    "Aplicación orientada a personas independizadas que genera automáticamente menús semanales personalizados y optimiza la compra semanal. Configura tus platos y, con solo dos clics, obtén un menú para la semana acompañado de una lista de compra adaptada."
+            },
+            diabetes: {
+                title: "Aplicación para Diabetes Tipo 1",
+                description:
+                    "Herramienta diseñada para personas con diabetes mellitus tipo 1 que permite llevar un control estadístico de las zonas de pinchazo, ayudándote a gestionar de forma óptima dónde inyectarte insulina y mejorar tu tratamiento."
+            },
+            regalos: {
+                title: "Aplicación para Gestión Digital de Listas de Regalos",
+                description:
+                    "Solución digital para distribuir listas de regalos en eventos (bodas, recién nacidos, cumpleaños, etc.). Permite incluir información y enlaces de productos, y a los invitados visualizar y marcar artículos comprados, mientras el dueño supervisa la lista sin conocer la identidad de los compradores."
+            },
+            mantenimiento: {
+                title: "Aplicación para Empresas de Mantenimiento",
+                description:
+                    "Dirigida a pequeñas y medianas empresas dedicadas al mantenimiento (electricidad, climatización, fontanería, etc.), esta aplicación organiza contratos y servicios, permite un control claro de lo acordado y mejora la comunicación directa con el cliente, abriendo la puerta a más ventas."
+            },
+            almacen: {
+                title: "Sistema de Gestión de Almacén",
+                description:
+                    "Sistema que permite a una pyme llevar un control básico de su stock, identificando quién o dónde se usan sus principales activos para optimizar la logística interna."
+            },
+            horario: {
+                title: "Sistema de Control Horario",
+                description:
+                    "Solución digital para que una pyme gestione las entradas y salidas de sus empleados, facilitando un seguimiento preciso y una administración eficiente del personal."
+            },
+            entrenador: {
+                title: "Aplicación para Entrenador Personal",
+                description:
+                    "Diseñada para conectar entrenadores con sus suscriptores, permitiendo compartir servicios, rutinas, pesajes, mediciones, consejos y cualquier otra información relevante de forma directa y personalizada."
+            },
+            restauracion: {
+                title: "Aplicación para el Sector Restauración",
+                description:
+                    "Proyecto en estudio que busca revolucionar el sector de la restauración mediante un sistema innovador basado en comisiones tanto por venta de producto como por volumen de ventas, transformando el modelo de negocio tradicional."
+            }
+        };
+
+        // Funciones para abrir y cerrar el modal de proyecto
+        function openModal(projectId) {
+            const modal = document.getElementById("projectModal");
+            const modalTitle = document.getElementById("modalTitle");
+            const modalContent = document.getElementById("modalContent");
+            const project = projectDetails[projectId];
+            modalTitle.textContent = project.title;
+            modalContent.textContent = project.description;
+            modal.style.display = "flex";
+        }
+        function closeModal() {
+            const modal = document.getElementById("projectModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
